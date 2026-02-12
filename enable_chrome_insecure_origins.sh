@@ -1,9 +1,15 @@
-# Insecure Origins Domain Addresses Configuration
+#!/bin/bash
 
-# Add your insecure origins below:
-# For example:
-# http://example.com
-# http://localhost:3000
+# Enable Chrome to accept insecure origins on macOS
 
-# Insecure origins can be specified as follows:
-# http://[::1]:<port>
+# Launch Chrome with the specified command-line flags
+open -a "Google Chrome" --args --disable-web-security --user-data-dir="/tmp/chrome_dev"
+
+# Insecure origins list
+# Add the following domains:
+# http://localhost
+# http://localhost:8080
+# http://127.0.0.1
+# http://127.0.0.1:8080
+
+ echo "Launched Chrome with insecure origins enabled for http://localhost, http://localhost:8080, http://127.0.0.1, and http://127.0.0.1:8080"
